@@ -112,6 +112,7 @@ span.welcome{
 .front .page-content{
 	background: url(/sites/all/themes/apigee_devconnect/images/homepage-content-bg.png) repeat-y;
 	height: 100%;
+	padding-top: 40px;
 }
 .front .span24 .block{
 	float: left;
