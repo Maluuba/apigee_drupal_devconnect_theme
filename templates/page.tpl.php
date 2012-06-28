@@ -7,13 +7,13 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
       </a>
-      
+
       <?php if ($logo): ?>
         <a class="brand" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
           <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
         </a>
       <?php endif; ?>
-      
+
       <div class="nav-collapse">
         <nav role="navigation">
           <?php if ($primary_nav): ?>
@@ -32,7 +32,7 @@
               <li class="<?php echo (($current_path == "user/register")?"active":""); ?>"><?php echo l(t("register"), "user/register"); ?></li>
               <li class="<?php echo (($current_path == "user/login")?"active":""); ?>"><?php echo l(t("login"), "user/login"); ?></li>
             <?php endif; ?>
-            <?php } else { 
+            <?php } else {
               $user_url =  "user/".$user->uid."/edit"; ?>
               <li class="<?php echo (($current_path == $user_url)?"active":""); ?>"><?php echo l($user->mail, $user_url); ?></li>
               <li><?php echo l(t("logout"), "user/logout"); ?></li>
@@ -51,8 +51,8 @@
   <header role="banner" id="page-header">
     <?php print render($page['header']); ?>
   </header>
-    
-  <!-- Breadcrumbs -->    
+
+  <!-- Breadcrumbs -->
   <div class="container" id="breadcrumb-navbar">
     <div class="row">
       <div class="span19">
@@ -65,7 +65,7 @@
       </div>
     </div>
   </div>
-  
+
   <!-- Title -->
   <?php if (drupal_is_front_page()): ?>
     <?php if ($title): ?>
@@ -74,10 +74,8 @@
               <div class="row">
                 <div class="span9">
                   <div class="title">
-                    <span class="welcome">Welcome</span><br />
-                    <!-- ***Uncomment the $site_name after fixing the issue with the width*** -->
-                    to the <?php print /*$site_name*/ 'to the Apigee Developer Portal'; ?>
-                  </div>
+                    <h1><span class="welcome">Welcome</span><br />to the&nbsp;<span><?php print $site_name ?></h1></span>
+                   </div>
                 </div>
               </div>
               <div class="page-header-content">
@@ -112,7 +110,7 @@
   <div class="container page-content">
     <!-- Admin Stuff-->
     <?php print $messages; ?>
-    <?php if ($page['help']): ?> 
+    <?php if ($page['help']): ?>
       <div class="well"><?php print render($page['help']); ?></div>
     <?php endif; ?>
     <?php if ($action_links): ?>
@@ -125,10 +123,10 @@
         <aside class="span6" role="complementary">
           <?php print render($page['sidebar_first']); ?>
         </aside>
-      <?php endif; ?>  
-  
+      <?php endif; ?>
+
       <!-- Main Body  -->
-      <section class="<?php print _apigee_base_content_span($columns); ?>">  
+      <section class="<?php print _apigee_base_content_span($columns); ?>">
         <?php if ($page['highlighted']): ?>
           <div class="highlighted hero-unit"><?php print render($page['highlighted']); ?></div>
         <?php endif; ?>
@@ -145,7 +143,7 @@
           <?php print render($page['sidebar_second']); ?>
         </aside>  <!-- /#sidebar-second -->
       <?php endif; ?>
-  
+
     </div>
   </div>
 </div>
@@ -160,5 +158,5 @@
 </footer>
 
 
-  
+
 
