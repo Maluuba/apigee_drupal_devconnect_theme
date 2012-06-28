@@ -1,0 +1,19 @@
+name = Apigee DevConnect Theme
+description = ..
+core = 7.x
+base theme = apigee_base
+
+regions[header]         = 'Top Bar'
+regions[highlighted]    = 'Highlighted'
+regions[help]           = 'Help'
+regions[content]        = 'Content'
+regions[sidebar_first]  = 'Primary'
+regions[sidebar_second] = 'Secondary'
+regions[footer]         = 'Footer'
+
+stylesheets[all][] = css/apigee_devconnect.css
+
+scripts[] = js/global.js
+
+settings[toggle_name] = 0
+settings[toggle_search] = 1

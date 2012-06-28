@@ -1,0 +1,203 @@
+html, body{
+	height: 90%;
+}
+.clearfix{
+	clear: both;
+}
+
+/* Drupal and Bootstrap Conflicts */
+.views-row.row{
+	margin: 0;
+}
+
+/* Homepage */
+.front #block-system-main{
+	clear: both;
+	display: none;
+}
+.front .master-container{
+	height: 100%;
+	min-height: 100%;
+}
+.front .page-header{
+	height: 250px;
+	margin-bottom: 0px;
+}
+.front .title{
+	background: white;
+	border: 1px solid #E8E8E8;
+	border-top: none;
+	/*box-shadow: 0 14px 11px #EEEEEE;*/
+	color: #484848;
+	font-size: 18px;
+	padding: 2px 14px 10px 14px;
+	position: relative;
+	top: -21px;
+}
+span.welcome{
+	font-size: 36px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	line-height: 48px;
+}
+.page-header-content{
+	position: absolute;
+	top: 0;
+}
+.page-header .get{
+	color: #C9C9C9;
+	float: left;
+	font-family: "Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+	font-size: 171px;
+	font-weight: 600;
+	line-height: 165px;
+	position: relative;
+	top: 68px;
+	width: 350px;
+}
+.page-header .buttons{
+	float: left;
+	left: 15px;
+	position: relative;
+	width: 310px;
+}
+.home-header-btn{
+	background: #f4f4f4;
+	border: 1px solid #b6bfc3;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	font-size: 24px;
+	margin-bottom: 18px;
+	position: relative;
+}
+.home-header-btn:hover{
+	box-shadow: 0px 0px 10px #AAA;
+}
+.home-header-btn a{
+	color: #484848;
+	display: block;
+	padding: 25px 12px;
+}
+.home-header-btn a:hover{
+	text-decoration: none;
+}
+.home-header-btn .first-word {
+	font-size: 28px;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+.home-header-btn .iconbtn {
+	background-image: url(/sites/all/themes/apigee_base/images/enterprise-sprites.png);
+	height: 30px;
+	position: absolute;
+  right: 15px;
+  top: 28px;
+	width: 30px;
+}
+.home-header-btn .iconbtn.document {
+	background-position: -240px -330px;
+}
+.home-header-btn .iconbtn.key{
+	background-position: -120px -330px;
+}
+.home-img{
+	float: left;
+	left: 35px;
+	position: relative;
+	width: 255px;
+}
+
+
+.front .page-content{
+	background: url(/sites/all/themes/apigee_devconnect/images/homepage-content-bg.png) repeat-y;
+	height: 100%;
+}
+.front .span24 .block{
+	float: left;
+}
+.develop-with-these{
+	padding-right: 25px;
+	width: 314px;
+}
+.forum-discussions{
+	padding: 0 15px;
+	width: 279px;
+}
+.recent-blog-posts{
+	padding-left: 20px;
+	width: 280px;
+}
+.develop-with-these h2{
+	font-size: 26px;
+	font-weight: 600;
+	margin-bottom: 15px;
+}
+.develop-with-these h3{
+  color: #137AAA;
+  font-size: 18px;
+  font-weight: 600;
+  padding-bottom: 5px;
+  padding-left: 50px;
+}
+.develop-with-these p{
+	padding-left: 50px;
+	margin-top: -5px;
+}
+.starter h3{
+	background: url("/sites/all/themes/apigee_devconnect/images/gear-green.png") no-repeat scroll 0 0 transparent;
+}
+.provider h3{
+	background: url("/sites/all/themes/apigee_devconnect/images/gear-purple.png") no-repeat scroll 0 0 transparent;
+}
+#block-views-home-featured-forum-posts-block h2,
+#block-views-recent-blog-posts-block-1 h2{
+	font-size: 18px;
+	font-weight: 600;
+	margin-bottom: 15px;
+}
+.view-home-featured-forum-posts .views-row{
+	border-bottom: 1px solid #e3e3e3;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	position: relative;
+}
+.view-home-featured-forum-posts .views-field-last-updated{
+	width: 230px;
+}
+.view-home-featured-forum-posts .views-field-comment-count{
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.view-home-featured-forum-posts .comment-count{
+	background: url("/sites/all/themes/apigee_devconnect/images/comment-icon.png") no-repeat scroll 0 0 transparent;
+	padding-left: 35px;
+}
+.view-recent-blog-posts .views-row{
+	clear: both;
+	position: relative;
+}
+span.blog-icon{
+	background: url("/sites/all/themes/apigee_devconnect/images/blog-icon.png") no-repeat scroll 0 0 transparent;
+  display: inline-block;
+  height: 19px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 17px;
+}
+.view-recent-blog-posts .views-field-created-1{
+	background: none repeat scroll 0 0 #FAFAFA;
+	border: 1px solid #D6D6D6;
+	border-radius: 5px 5px 5px 5px;
+	color: #959595;
+	float: left;
+	padding: 1px;
+	text-align: center;
+	width: 35px;
+}
+.view-recent-blog-posts .views-field-body{
+	float: right;
+  width: 231px;
+}
