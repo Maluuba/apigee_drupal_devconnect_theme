@@ -118,15 +118,15 @@ span.welcome{
 }
 .develop-with-these{
 	padding-right: 25px;
-	width: 314px;
+	width: 325px;
 }
 .forum-discussions{
 	padding: 0 15px;
-	width: 279px;
+	width: 293px;
 }
 .recent-blog-posts{
 	padding-left: 20px;
-	width: 280px;
+	width: 255px;
 }
 .develop-with-these h2{
 	font-size: 26px;
@@ -199,5 +199,5 @@ span.blog-icon{
 }
 .view-recent-blog-posts .views-field-body{
 	float: right;
-  width: 231px;
+  width: 210px;
 }
