@@ -3,9 +3,9 @@
     attach: function (context, settings) {
       // Add Classes
       $('.view-home-featured-forum-posts .views-row').addClass('row');
-      
-      // Add Wrappers
-      // $('.block').wrapInner('<div class="block-inner" />');
+
+      // CSS
+      $('.node-blog.node-teaser:first').css('padding-top','0px');
     }
   };
 })(jQuery);
