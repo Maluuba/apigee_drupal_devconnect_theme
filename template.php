@@ -148,7 +148,7 @@ function apigee_devconnect_preprocess_region(&$variables, $hook) {
 function apigee_devconnect_preprocess_node(&$variables) {
   // Add some date variables
   if ($variables['type'] = 'blog') {
-    $variables['posted'] = 'Posted about ' . format_interval((time() - $variables['created']) , 2) . t(' ago');
+    $variables['posted'] = 'Posted by ' . $variables['name'] . '&nbsp;|&nbsp;' . format_interval((time() - $variables['created']) , 2) . t(' ago');
     $variables['date'] = format_interval((time() - $variables['created']) , 2);
     $variables['submitted_day'] = format_date($variables['node']->created, 'custom', 'j');
     $variables['submitted_month'] = format_date($variables['node']->created, 'custom', 'M');

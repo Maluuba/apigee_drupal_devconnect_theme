@@ -12,19 +12,23 @@
         <div class="month"><?php print $submitted_month; ?></div>
         <div class="day"><?php print $submitted_day; ?></div>
       </div>
-    <?php else: ?>
-      <?php if ($display_submitted): ?>
-        <span class="submitted">
-        <?php print $submitted; ?>
-        </span>
-      <?php endif; ?>
     <?php endif; ?>
 
   </header>
 
-  <?php if ($teaser): ?><div class="node-body"><?php endif; ?>
-  <div class="posted"><?php print $posted; ?></div>
-
+  <?php if ($teaser): ?>
+    <div class="node-body">
+      <div class="posted"><?php print $posted; ?></div>
+      <?php
+        // Hide comments, tags, and links now so that we can render them later.
+        hide($content['comments']);
+        hide($content['links']);
+        hide($content['field_tags']);
+        print render($content);
+      ?>
+    </div>
+  <?php else: ?>
+    <div class="posted"><?php print $posted; ?></div>
     <?php
       // Hide comments, tags, and links now so that we can render them later.
       hide($content['comments']);
@@ -32,7 +36,7 @@
       hide($content['field_tags']);
       print render($content);
     ?>
-  <?php if ($teaser): ?></div><?php endif; ?>
+  <?php endif; ?>
 
   <?php if (!empty($content['field_tags']) || !empty($content['links'])): ?>
     <footer>
