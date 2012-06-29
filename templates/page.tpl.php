@@ -101,9 +101,13 @@
     <?php if ($title): ?>
         <section class="page-header">
             <div class="container">
-              <?php print render($title_prefix); ?>
-              <h1><?php print $title; ?></h1>
-              <?php print render($title_suffix); ?>
+              <div class="row">
+                <span class="<?php print _apigee_base_content_span($columns); ?>">
+                 <?php print render($title_prefix); ?>
+                 <h1><?php print $title; ?></h1>
+                 <?php print render($title_suffix); ?>
+                </span>
+              </div>
             </div>
         </section>
     <?php endif; ?>
