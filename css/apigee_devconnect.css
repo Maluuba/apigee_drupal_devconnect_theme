@@ -1,9 +1,6 @@
 html, body{
 	height: 100%;
 }
-body.front{
-	overflow: hidden;
-}
 .clearfix{
 	clear: both;
 }
@@ -19,6 +16,7 @@ body.front{
 	display: none;
 }
 .front .master-container{
+	background: #f9f9f9;
 	height: 100%;
 	min-height: 100%;
 	padding-bottom: 50px;
@@ -120,9 +118,12 @@ span.welcome{
 
 
 .front .page-content{
-	background: url(/sites/all/themes/apigee_devconnect/images/homepage-content-bg.png) repeat-y;
-	height: 100%;
-	padding-top: 40px;
+	background: none repeat scroll 0 0 #FFFFFF;
+	border-bottom: 1px solid #E8E8E8;
+}
+.front .page-content .container{
+	background: url("/sites/all/themes/apigee_devconnect/images/homepage-content-bg.png") repeat-y scroll 0 0 transparent;
+  padding: 40px 0px 52px;
 }
 .front .span24 .block{
 	float: left;

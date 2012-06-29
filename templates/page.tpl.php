@@ -53,15 +53,17 @@
   </header>
 
   <!-- Breadcrumbs -->
-  <div class="container" id="breadcrumb-navbar">
-    <div class="row">
-      <div class="span19">
-      <?php if ($breadcrumb): print $breadcrumb; endif;?>
-      </div>
-      <div class="span5 pull-right">
-      <?php if ($search): ?>
-        <?php if ($search): print render($search); endif; ?>
-      <?php endif; ?>
+  <div id="breadcrumb-navbar">
+    <div class="container">
+      <div class="row">
+        <div class="span19">
+        <?php if ($breadcrumb): print $breadcrumb; endif;?>
+        </div>
+        <div class="span5 pull-right">
+        <?php if ($search): ?>
+          <?php if ($search): print render($search); endif; ?>
+        <?php endif; ?>
+        </div>
       </div>
     </div>
   </div>
@@ -107,43 +109,45 @@
     <?php endif; ?>
   <?php endif; ?>
 
-  <div class="container page-content">
-    <!-- Admin Stuff-->
-    <?php print $messages; ?>
-    <?php if ($page['help']): ?>
-      <div class="well"><?php print render($page['help']); ?></div>
-    <?php endif; ?>
-    <?php if ($action_links): ?>
-      <ul class="action-links"><?php print render($action_links); ?></ul>
-    <?php endif; ?>
-
-    <div class="row">
-      <!-- Left Sidebar  -->
-      <?php if ($page['sidebar_first']): ?>
-        <aside class="span6" role="complementary">
-          <?php print render($page['sidebar_first']); ?>
-        </aside>
+  <div class="page-content">
+    <div class="container">
+      <!-- Admin Stuff-->
+      <?php print $messages; ?>
+      <?php if ($page['help']): ?>
+        <div class="well"><?php print render($page['help']); ?></div>
+      <?php endif; ?>
+      <?php if ($action_links): ?>
+        <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
 
-      <!-- Main Body  -->
-      <section class="<?php print _apigee_base_content_span($columns); ?>">
-        <?php if ($page['highlighted']): ?>
-          <div class="highlighted hero-unit"><?php print render($page['highlighted']); ?></div>
+      <div class="row">
+        <!-- Left Sidebar  -->
+        <?php if ($page['sidebar_first']): ?>
+          <aside class="span6" role="complementary">
+            <?php print render($page['sidebar_first']); ?>
+          </aside>
         <?php endif; ?>
-        <?php if (($tabs) && (!$is_front)): ?>
-          <?php print render($tabs); ?>
+
+        <!-- Main Body  -->
+        <section class="<?php print _apigee_base_content_span($columns); ?>">
+          <?php if ($page['highlighted']): ?>
+            <div class="highlighted hero-unit"><?php print render($page['highlighted']); ?></div>
+          <?php endif; ?>
+          <?php if (($tabs) && (!$is_front)): ?>
+            <?php print render($tabs); ?>
+          <?php endif; ?>
+          <a id="main-content"></a>
+          <?php print render($page['content']); ?>
+        </section>
+
+        <!-- Right Sidebar  -->
+        <?php if ($page['sidebar_second']): ?>
+          <aside class="span6" role="complementary">
+            <?php print render($page['sidebar_second']); ?>
+          </aside>  <!-- /#sidebar-second -->
         <?php endif; ?>
-        <a id="main-content"></a>
-        <?php print render($page['content']); ?>
-      </section>
 
-      <!-- Right Sidebar  -->
-      <?php if ($page['sidebar_second']): ?>
-        <aside class="span6" role="complementary">
-          <?php print render($page['sidebar_second']); ?>
-        </aside>  <!-- /#sidebar-second -->
-      <?php endif; ?>
-
+      </div>
     </div>
   </div>
 </div>
