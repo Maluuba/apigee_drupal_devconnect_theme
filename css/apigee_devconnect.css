@@ -212,3 +212,16 @@ span.blog-icon{
 	float: right;
   width: 210px;
 }
+
+/* Documentation */
+#documentation ul{
+	margin: 5px 0px 15px;
+}
+#documentation li{
+	list-style: none;
+	margin-bottom: 5px;
+}
+#documentation li a{
+	color: #137aaa;
+	font-size: 15px;
+}
