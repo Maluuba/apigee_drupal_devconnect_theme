@@ -9,6 +9,20 @@ html, body{
 .views-row.row{
 	margin: 0;
 }
+.well {
+	background-color: #F5F5F5;
+	border: 1px solid rgba(0, 0, 0, 0.05);
+	border-radius: 4px 4px 4px 4px;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+	display: inline-block;
+	margin-bottom: 20px;
+}
+
+/* Sidebar */
+.region-sidebar-second h2{
+	font-size: 18px;
+	font-weight: 600;
+}
 
 /* Homepage */
 .front #block-system-main{
@@ -248,14 +262,25 @@ span.blog-icon{
 	margin-top: 7px;
 	padding: 0 8px;
 	text-align: center;
-	width: 23px;
+	width: 3%;
 }
 .node-blog.node-teaser .node-body,
 .node-blog.node-teaser h2{
 	float: right;
 	padding-left: 17px;
-	width: 892px;
+	width: 92%;
 }
 .node-blog.node-teaser .posted{
 	margin-bottom: 20px;
+}
+#block-views-hot-topics-block h2{
+	background: url("/sites/all/themes/apigee_devconnect/images/hot-icon.png") no-repeat scroll 110px center transparent;
+}
+.view-hot-topics .views-row ul, li{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.view-hot-topics .views-row li{
+	margin-bottom: 5px;
 }
