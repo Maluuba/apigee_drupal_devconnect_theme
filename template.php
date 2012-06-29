@@ -7,12 +7,12 @@
  */
 function apigee_devconnect_preprocess_page(&$variables) {
   // if ($variables['is_front'] == TRUE) {
-  //   
+  //
   // }
   // else {
-  //   
+  //
   // }
-  
+
   module_load_include('inc', 'user', 'user.admin');
   $user_reg_setting = drupal_get_form('user_admin_settings');
   $variables['user_reg_setting'] = $user_reg_setting['registration_cancellation']['user_register']['#value'];
@@ -29,7 +29,7 @@ function apigee_devconnect_preprocess_page(&$variables) {
     $replace = array('type="hidden"', 'type="search" placeholder="search" autocapitalize="off" autocorrect="off"');
     $vars['search_form'] = str_replace($find, $replace, $search_form);
   }
-  
+
   // Add information about the number of sidebars.
   if (!empty($variables['page']['sidebar_first']) && !empty($variables['page']['sidebar_second'])) {
     $variables['columns'] = 3;
@@ -55,7 +55,7 @@ function apigee_devconnect_preprocess_page(&$variables) {
     // Build links
     $tree = menu_tree_page_data(variable_get('menu_main_links_source', 'main-menu'));
     $variables['main_menu'] = apigee_base_menu_navigation_links($tree);
-    
+
     // Build list
     $variables['primary_nav'] = theme('apigee_base_links', array(
       'links' => $variables['main_menu'],
@@ -70,7 +70,7 @@ function apigee_devconnect_preprocess_page(&$variables) {
       ),
     ));
   }
-  
+
   // Make sure the menu module is in use before setting menu vars.
   if (module_exists('menu')) {
     // Primary nav
@@ -79,7 +79,7 @@ function apigee_devconnect_preprocess_page(&$variables) {
       // Build links
       $tree = menu_tree_page_data(variable_get('menu_main_links_source', 'main-menu'));
       $variables['main_menu'] = apigee_base_menu_navigation_links($tree);
-    
+
       // Build list
       $variables['primary_nav'] = theme('apigee_base_links', array(
         'links' => $variables['main_menu'],
@@ -94,16 +94,16 @@ function apigee_devconnect_preprocess_page(&$variables) {
         ),
       ));
     }
-  
+
     // Secondary nav
     $variables['secondary_nav'] = FALSE;
     if ($variables['secondary_menu']) {
       $secondary_menu = menu_load(variable_get('menu_secondary_links_source', 'user-menu'));
-    
+
       // Build links
       $tree = menu_tree_page_data($secondary_menu['menu_name']);
       $variables['secondary_menu'] = apigee_base_menu_navigation_links($tree);
-    
+
       // Build list
       $variables['secondary_nav'] = theme('apigee_base_btn_dropdown', array(
         'links' => $variables['secondary_menu'],
@@ -135,7 +135,22 @@ function apigee_devconnect_preprocess_region(&$variables, $hook) {
   if ($variables['region'] == 'content') {
     $variables['theme_hook_suggestions'][] = 'region__no_wrapper';
   }
-  
+
   if($variables['region'] == "sidebar_first")
     $variables['classes_array'][] = 'well';
+}
+
+/**
+ * Preprocess variables for node.tpl.php
+ *
+ * @see node.tpl.php
+ */
+function apigee_devconnect_preprocess_node(&$variables) {
+  // Add some date variables
+  if ($variables['type'] = 'blog') {
+    $variables['posted'] = 'Posted about ' . format_interval((time() - $variables['created']) , 2) . t(' ago');
+    $variables['date'] = format_interval((time() - $variables['created']) , 2);
+    $variables['submitted_day'] = format_date($variables['node']->created, 'custom', 'j');
+    $variables['submitted_month'] = format_date($variables['node']->created, 'custom', 'M');
+  }
 }

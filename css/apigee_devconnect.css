@@ -202,6 +202,8 @@ span.blog-icon{
 	background: none repeat scroll 0 0 #FAFAFA;
 	border: 1px solid #D6D6D6;
 	border-radius: 5px 5px 5px 5px;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
 	color: #959595;
 	float: left;
 	padding: 1px;
@@ -224,4 +226,31 @@ span.blog-icon{
 #documentation li a{
 	color: #137aaa;
 	font-size: 15px;
+}
+
+/* Blog */
+.node-blog.node-teaser{
+	border-bottom: 1px dashed #b1b1b1;
+	padding: 30px 0px;
+}
+.node-blog.node-teaser .node-date{
+	background: none repeat scroll 0 0 #F9F9F9;
+	border: 1px solid #C9C9C9;
+	border-radius: 5px 5px 5px 5px;
+	color: #959595;
+	float: left;
+	font-size: 12px;
+	margin-top: 7px;
+	padding: 0 8px;
+	text-align: center;
+	width: 23px;
+}
+.node-blog.node-teaser .node-body,
+.node-blog.node-teaser h2{
+	float: right;
+	padding-left: 17px;
+	width: 892px;
+}
+.node-blog.node-teaser .posted{
+	margin-bottom: 20px;
 }
