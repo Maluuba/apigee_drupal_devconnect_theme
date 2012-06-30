@@ -136,9 +136,10 @@ span.welcome{
 .page-content{
 	background: none repeat scroll 0 0 #FFFFFF;
 	border-bottom: 1px solid #E8E8E8;
+	padding: 40px 0px 80px;
 }
-.page-content .container{
-  padding: 40px 0px 80px;
+.not-front .page-content{
+	padding: 20px 0px 80px;
 }
 .front .page-content .container{
 	background: url("/sites/all/themes/apigee_devconnect/images/homepage-content-bg.png") repeat-y scroll 0 0 transparent;
@@ -270,7 +271,7 @@ span.blog-icon{
 	padding-left: 17px;
 	width: 92%;
 }
-.node-blog.node-teaser .posted{
+.node-blog .posted{
 	margin-bottom: 20px;
 }
 #block-views-hot-topics-block h2{
@@ -284,3 +285,13 @@ span.blog-icon{
 .view-hot-topics .views-row li{
 	margin-bottom: 5px;
 }
+
+/* Forums */
+/*#forum .icon{
+	background-image: url(/misc/forum-icons.png);
+	background-repeat: no-repeat;
+	float: left;
+	height: 24px;
+	margin: 0 9px 0 0;
+	width: 24px;
+}*/
