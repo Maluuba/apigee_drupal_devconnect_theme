@@ -7,6 +7,8 @@
       // CSS
       $('.node-blog.node-teaser:first').css('padding-top','0px');
       $('table').addClass('table table-condensed');
+
+      $(".collapse").collapse();
     }
   };
 })(jQuery);

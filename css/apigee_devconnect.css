@@ -287,11 +287,29 @@ span.blog-icon{
 }
 
 /* Forums */
-/*#forum .icon{
-	background-image: url(/misc/forum-icons.png);
-	background-repeat: no-repeat;
-	float: left;
-	height: 24px;
-	margin: 0 9px 0 0;
-	width: 24px;
-}*/
+.node-type-forum .submitted{
+	display: block;
+	margin-bottom: 20px;
+}
+.node-type-forum .field-name-body,
+.node-type-forum article.comment{
+	border-bottom: 1px dashed #b1b1b1;
+	margin-top: 10px;
+	padding-bottom: 10px;
+}
+.node-type-forum .comment-wrapper,
+.node-type-forum  .indented{
+	padding-left: 25px;
+}
+.node-type-forum  .indented {
+	margin-left: 0;
+	padding-left: 25px;
+}
+article.comment .comment-submitted{
+	font-size: 15px;
+	font-weight: 600;
+	margin-bottom: 5px;
+}
+.comment-form .btn{
+	margin-right: 10px;
+}
