@@ -250,7 +250,7 @@ span.blog-icon{
 
 /* Blog */
 .node-blog.node-teaser{
-	border-bottom: 1px dashed #b1b1b1;
+	border-bottom: 1px solid #E8E8E8;
 	padding: 30px 0px;
 }
 .node-blog.node-teaser .node-date{
@@ -293,7 +293,7 @@ span.blog-icon{
 }
 .node-type-forum .field-name-body,
 .node-type-forum article.comment{
-	border-bottom: 1px dashed #b1b1b1;
+	border-bottom: 1px solid #E8E8E8;
 	margin-top: 10px;
 	padding-bottom: 10px;
 }
