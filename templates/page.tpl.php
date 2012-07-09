@@ -24,7 +24,7 @@
               <li class="<?php echo (($current_path == "user/login")?"active":""); ?>"><?php echo l(t("login"), "user/login"); ?></li>
             <?php endif; ?>
             <?php } else {
-              $user_url =  "user/".$user->uid."/edit"; ?>
+              $user_url =  "user/".$user->uid; ?>
               <li class="<?php echo (($current_path == $user_url)?"active":""); ?>"><?php echo l($user->mail, $user_url); ?></li>
               <li><?php echo l(t("logout"), "user/logout"); ?></li>
             <?php } ?>
