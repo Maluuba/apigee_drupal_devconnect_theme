@@ -1,3 +1,4 @@
+<?php global $user; $current_path = implode("/", arg()); ?>
 <header id="navbar" role="banner" class="navbar navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container">
