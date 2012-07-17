@@ -4,6 +4,7 @@ core = 7.x
 base theme = apigee_base
 
 regions[header]         = 'Top Bar'
+regions[homepage_header]= 'Homepage Header'
 regions[highlighted]    = 'Highlighted'
 regions[help]           = 'Help'
 regions[content]        = 'Content'

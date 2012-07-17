@@ -61,32 +61,20 @@
 
   <!-- Title -->
   <?php if (drupal_is_front_page()): ?>
-    <?php if ($title): ?>
-        <section class="page-header">
-            <div class="container">
-              <div class="row">
-                <div class="span9">
-                  <div class="title">
-                    <h1><span class="welcome">Welcome</span><br />to the&nbsp;<span><?php print $site_name ?></h1></span>
-                   </div>
-                </div>
-              </div>
-              <div class="page-header-content">
-                <div class="get">GET</div>
-                <div class="buttons">
-                  <div class="home-header-btn document">
-                    <a href="#"><div class="first-word">Started</div>with documentation<span class="iconbtn document"></span></a>
-                  </div>
-                  <div class="home-header-btn key">
-                    <a href="#"><div class="first-word">Building</div>with access to a key<span class="iconbtn key"></span></a>
-                  </div>
-                </div>
-                <div class="home-img">
-                  <img src="/sites/all/themes/apigee_devconnect/images/homepage-image.png" alt="">
-                </div>
-              </div>
-            </div>
-        </section>
+  <?php if ($title): ?>
+    <section class="page-header">
+      <div class="container">
+        <div class="row">
+          <div class="span9">
+            <div class="title">
+              <h1><span class="welcome">Welcome</span><br />to the&nbsp;<span><?php print $site_name ?></h1></span>
+             </div>
+          </div>
+        </div>
+        <div class="page-header-content">
+          <?php print render($page['homepage_header']); ?>
+        </div>
+    </section>
     <?php endif; ?>
   <?php else: ?>
     <?php if ($title): ?>
