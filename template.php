@@ -1,18 +1,34 @@
 <?php
 
+function apigee_devconnect_preprocess_html(&$variables) {
+  $header_bg_color         = theme_get_setting('header_bg_color');
+  $header_txt_color        = theme_get_setting('header_txt_color');
+  $header_hover_bg_color   = theme_get_setting('header_hover_bg_color');
+  $header_hover_txt_color  = theme_get_setting('header_hover_txt_color');
+  $link_color              = theme_get_setting('link_color');
+  $link_hover_color        = theme_get_setting('link_hover_color');
+  $footer_bg_color         = theme_get_setting('footer_bg_color');
+  $footer_link_color       = theme_get_setting('footer_link_color');
+  $footer_link_hover_color = theme_get_setting('footer_link_hover_color');
+
+  drupal_add_css(".navbar-inner {background-color: $header_bg_color}", array('group' => CSS_THEME, 'type' => 'inline'));
+  drupal_add_css(".navbar .nav > li > a {color: $header_txt_color}", array('group' => CSS_THEME, 'type' => 'inline'));
+  drupal_add_css(".navbar .nav > li > a:hover {background-color: $header_hover_bg_color}", array('group' => CSS_THEME, 'type' => 'inline'));
+  drupal_add_css(".navbar .nav > li > a:hover {color: $header_hover_txt_color}", array('group' => CSS_THEME, 'type' => 'inline'));
+  drupal_add_css("a {color: $link_color}", array('group' => CSS_THEME, 'type' => 'inline'));
+  drupal_add_css("a:hover {color: $link_hover_color}", array('group' => CSS_THEME, 'type' => 'inline'));
+
+  drupal_add_css(".footer .footer-inner {background-color: $footer_bg_color}", array('group' => CSS_THEME, 'type' => 'inline'));
+  drupal_add_css(".footer .footer-inner .navbar ul.footer-links > li > a {color: $footer_link_color}", array('group' => CSS_THEME, 'type' => 'inline'));
+  drupal_add_css(".footer .footer-inner .navbar ul.footer-links > li > a:hover {color: $footer_link_hover_color}", array('group' => CSS_THEME, 'type' => 'inline'));
+
+}
 /**
  * Preprocess variables for page.tpl.php
  *
  * @see page.tpl.php
  */
 function apigee_devconnect_preprocess_page(&$variables) {
-  // if ($variables['is_front'] == TRUE) {
-  //
-  // }
-  // else {
-  //
-  // }
-
   module_load_include('inc', 'user', 'user.admin');
   $user_reg_setting = drupal_get_form('user_admin_settings');
   $variables['user_reg_setting'] = $user_reg_setting['registration_cancellation']['user_register']['#value'];

@@ -18,3 +18,13 @@ scripts[] = js/global.js
 
 settings[toggle_name] = 0
 settings[toggle_search] = 1
+
+settings[header_bg_color] = #FF4300
+settings[header_txt_color] = #FFFFFF
+settings[header_hover_bg_color] = #E02E01
+settings[header_hover_txt_color] = #FFFFFF
+settings[link_color] = #137AAA
+settings[link_hover_color] = #0B4965
+settings[footer_bg_color] = #FFFFFF
+settings[footer_link_color] = #0B4965
+settings[footer_link_hover_color] = #0B4965
