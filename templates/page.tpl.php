@@ -67,7 +67,11 @@
         <div class="row">
           <div class="span9">
             <div class="title">
-              <h1><span class="welcome">Welcome</span><br />to the&nbsp;<span><?php print $site_name ?></h1></span>
+              <?php if (theme_get_setting('welcome_message')): ?>
+                <h1><?php print theme_get_setting('welcome_message'); ?></h1>
+              <?php else: ?>
+                <h1><span class="welcome">Welcome</span><br />to the&nbsp;<span><?php print $site_name ?></h1></span>
+              <?php endif; ?>
              </div>
           </div>
         </div>

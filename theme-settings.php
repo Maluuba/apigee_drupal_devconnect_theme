@@ -1,5 +1,12 @@
 <?php
 function apigee_devconnect_form_system_theme_settings_alter(&$form, $form_state) {
+  $form['welcome_message'] = array(
+    '#type'          => 'textfield',
+    '#title'         => t('Welcome Message'),
+    '#default_value' => theme_get_setting('welcome_message'),
+    '#description'   => t("Use this field to change the default welcome message"),
+    '#weight' => -11,
+  );
   $form['devconnect_branding'] = array(
     '#type' => 'fieldset',
     '#weight' => -10,
