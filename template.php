@@ -1,5 +1,8 @@
 <?php
 
+/*
+ * Implements hook_preprocess_html().
+ */
 function apigee_devconnect_preprocess_html(&$variables) {
   $header_bg_color         = theme_get_setting('header_bg_color');
   $header_txt_color        = theme_get_setting('header_txt_color');
@@ -13,20 +16,18 @@ function apigee_devconnect_preprocess_html(&$variables) {
 
   drupal_add_css(".navbar-inner {background-color: $header_bg_color}", array('group' => CSS_THEME, 'type' => 'inline'));
   drupal_add_css(".navbar .nav > li > a {color: $header_txt_color}", array('group' => CSS_THEME, 'type' => 'inline'));
-  drupal_add_css(".navbar .nav > li > a:hover {background-color: $header_hover_bg_color}", array('group' => CSS_THEME, 'type' => 'inline'));
+  drupal_add_css(".navbar .nav > li > a:hover, .navbar .nav > li > a.active {background-color: $header_hover_bg_color}", array('group' => CSS_THEME, 'type' => 'inline'));
   drupal_add_css(".navbar .nav > li > a:hover {color: $header_hover_txt_color}", array('group' => CSS_THEME, 'type' => 'inline'));
   drupal_add_css("a {color: $link_color}", array('group' => CSS_THEME, 'type' => 'inline'));
   drupal_add_css("a:hover {color: $link_hover_color}", array('group' => CSS_THEME, 'type' => 'inline'));
-
   drupal_add_css(".footer .footer-inner {background-color: $footer_bg_color}", array('group' => CSS_THEME, 'type' => 'inline'));
   drupal_add_css(".footer .footer-inner .navbar ul.footer-links > li > a {color: $footer_link_color}", array('group' => CSS_THEME, 'type' => 'inline'));
   drupal_add_css(".footer .footer-inner .navbar ul.footer-links > li > a:hover {color: $footer_link_hover_color}", array('group' => CSS_THEME, 'type' => 'inline'));
 
 }
+
 /**
- * Preprocess variables for page.tpl.php
- *
- * @see page.tpl.php
+ * Preprocessor for theme('page').
  */
 function apigee_devconnect_preprocess_page(&$variables) {
   module_load_include('inc', 'user', 'user.admin');
@@ -143,9 +144,13 @@ function apigee_devconnect_preprocess_page(&$variables) {
 }
 
 /**
- * Preprocess variables for region.tpl.php
- *
- * @see region.tpl.php
+ * Preprocessor for theme('node').
+ */
+function apigee_devconnect_preprocess_node(&$variables) {
+}
+
+/**
+ * Preprocessor for theme('region').
  */
 function apigee_devconnect_preprocess_region(&$variables, $hook) {
   if ($variables['region'] == 'content') {
@@ -155,3 +160,14 @@ function apigee_devconnect_preprocess_region(&$variables, $hook) {
   if($variables['region'] == "sidebar_first")
     $variables['classes_array'][] = 'well';
 }
+
+/**
+ * hook_comment_form_alter
+ */
+
+function apigee_devconnect_form_comment_form_alter(&$form, &$form_state) {
+  hide($form['subject']);
+  hide($form['actions']['preview']);
+  $form['actions']['submit']['#value'] = 'Add comment';
+}
+
