@@ -18,8 +18,8 @@
 }
 .front .title h1{
 	color: #484848;
-	font-size: 20px;
-	line-height: 20px;
+	font-size: 23px;
+	line-height: 27px;
 	margin: 0;
 	padding: 0;
 }
@@ -214,4 +214,14 @@ span.blog-icon{
 }
 .view-hot-topics .views-row li{
 	margin-bottom: 5px;
+}
+
+/* Comments */
+#comments article{
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #E4E4E4;
+}
+#comments .indented article{
+  padding-left: 20px;
 }
