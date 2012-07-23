@@ -164,10 +164,9 @@ function apigee_devconnect_preprocess_region(&$variables, $hook) {
 /**
  * hook_comment_form_alter
  */
-
 function apigee_devconnect_form_comment_form_alter(&$form, &$form_state) {
   hide($form['subject']);
+  hide($form['author']);
   hide($form['actions']['preview']);
   $form['actions']['submit']['#value'] = 'Add comment';
 }
-
