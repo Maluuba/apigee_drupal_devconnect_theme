@@ -147,6 +147,7 @@ function apigee_devconnect_preprocess_page(&$variables) {
  * Preprocessor for theme('node').
  */
 function apigee_devconnect_preprocess_node(&$variables) {
+
 }
 
 /**
@@ -157,8 +158,9 @@ function apigee_devconnect_preprocess_region(&$variables, $hook) {
     $variables['theme_hook_suggestions'][] = 'region__no_wrapper';
   }
 
-  if($variables['region'] == "sidebar_first")
+  if($variables['region'] == "sidebar_first") {
     $variables['classes_array'][] = 'well';
+  }
 }
 
 /**

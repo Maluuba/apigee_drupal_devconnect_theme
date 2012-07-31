@@ -190,6 +190,11 @@ span.blog-icon{
   width: 210px;
 }
 
+/* Main Body */
+#block-system-main{
+	position: relative;
+}
+
 /* Documentation */
 #documentation ul{
 	margin: 5px 0px 15px;
@@ -224,4 +229,73 @@ span.blog-icon{
 }
 #comments .indented article{
   padding-left: 20px;
+}
+
+/* My Apps */
+#devconnect-developer-apps-edit-form label{
+	font-weight: 600;
+}
+.add-app{
+	background-color: #f3f3f4;
+  background-image: -moz-linear-gradient(top, #ffffff, #f3f3f4);
+  background-image: -ms-linear-gradient(top, #ffffff, #f3f3f4);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#f3f3f4));
+  background-image: -webkit-linear-gradient(top, #ffffff, #f3f3f4);
+  background-image: -o-linear-gradient(top, #ffffff, #f3f3f4);
+  background-image: linear-gradient(top, #ffffff, #f3f3f4);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f3f3f4', GradientType=0);
+  background: url(/sites/all/themes/apigee_devconnect/images/add-icon.png) no-repeat 116px 15px;
+	border: 1px solid #b7c0c5;
+	border-radius: 5px 5px 5px 5px;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+	color: #3C3D3C;
+	font-weight: 600;
+	position: absolute;
+	right: 0;
+	top: -87px;
+	padding: 18px 45px 18px 15px;
+}
+.add-app:hover{
+	text-decoration: none;
+}
+.app-content{
+	float: left;
+	width: 95%
+}
+hr{
+	clear: both;
+}
+h4.app-title{
+	color: #167bab;
+	font-size: 24px;
+	margin-bottom: 15px;
+	text-transform: capitalize;
+}
+.api-credentials-list-item-caption{
+	float: left;
+	font-weight: 600;
+}
+button.app-delete,
+button.app-delete:hover{
+	background: url(/sites/all/themes/apigee_devconnect/images/delete-icon.png) no-repeat;
+	border: none;
+	float: left;
+	height: 15px;
+	width: 15px;
+}
+.cancel-link{
+	margin-left: 10px;
+}
+
+
+/* Errors */
+div.error{
+	background: none;
+}
+
+/* Sitewide */
+input{
+	line-height: 16px !important;
 }
