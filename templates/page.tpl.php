@@ -25,8 +25,20 @@
             <?php endif; ?>
             <?php } else {
               $user_url =  "user/".$user->uid; ?>
-              <li class="<?php echo (($current_path == $user_url)?"active":""); ?>"><?php echo l($user->mail, $user_url); ?></li>
+
+              <li class="dropdown <?php echo (($current_path == $user_url)?"active":""); ?>">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php print $user->mail; ?><b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li class="<?php echo (($current_path == $user_url)?"active":""); ?>"><?php echo l('My Apps', $user_url . '/apps'); ?></li>
+                  <li class="<?php echo (($current_path == $user_url)?"active":""); ?>"><?php echo l('Edit Profile', $user_url . '/edit'); ?></li>
+                  <li><?php echo l(t("Logout"), "user/logout"); ?></li>
+                </ul>
+              </li>
+
+
+
               <li><?php echo l(t("logout"), "user/logout"); ?></li>
+
             <?php } ?>
             </ul>
           </div>
@@ -147,7 +159,3 @@
     </div>
   </div>
 </footer>
-
-
-
-
