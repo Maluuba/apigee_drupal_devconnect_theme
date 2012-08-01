@@ -288,7 +288,15 @@ button.app-delete:hover{
 .cancel-link{
 	margin-left: 10px;
 }
-
+.navbar .nav ul.dropdown-menu .active > a{
+	background: none;
+	color: #484848;
+}
+.navbar .nav ul.dropdown-menu .active > a:hover{
+	color: white;
+	text-decoration: none;
+	background-color: #1B97D1;
+}
 
 /* Errors */
 div.error{
