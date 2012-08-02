@@ -11,6 +11,9 @@
       $('.node-blog.node-teaser:first').css('padding-top','0px');
       $(".collapse").collapse();
       $('.page-comment-reply article.comment ul.links.inline').hide();
+
+      // jQuery Select
+      $('select#api_product').selectList();
     }
   };
 })(jQuery);
