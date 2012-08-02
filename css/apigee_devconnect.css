@@ -1,3 +1,13 @@
+/* Sitewide */
+input{
+	line-height: 16px !important;
+}
+
+/* Bootstrap */
+.caret{
+	opacity: 1;
+}
+
 /* Homepage */
 .front #block-system-main{
 	clear: both;
@@ -288,6 +298,14 @@ button.app-delete:hover{
 .cancel-link{
 	margin-left: 10px;
 }
+
+/* Links */
+ul.dropdown-menu{
+	padding-left: 10px;
+}
+ul.dropdown-menu a{
+	display: inline-block;
+}
 .navbar .nav ul.dropdown-menu .active > a{
 	background: none;
 	color: #484848;
@@ -301,9 +319,4 @@ button.app-delete:hover{
 /* Errors */
 div.error{
 	background: none;
-}
-
-/* Sitewide */
-input{
-	line-height: 16px !important;
 }
