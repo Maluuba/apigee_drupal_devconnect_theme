@@ -29,9 +29,9 @@
               <li class="dropdown <?php echo (($current_path == $user_url)?"active":""); ?>">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php print $user->mail; ?><b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                  <li class="<?php echo (($current_path == $user_url)?"active":""); ?>"><?php echo l('My Apps', $user_url . '/apps'); ?></li>
-                  <li class="<?php echo (($current_path == $user_url)?"active":""); ?>"><?php echo l('Edit Profile', $user_url . '/edit'); ?></li>
-                  <li><?php echo l(t("Logout"), "user/logout"); ?></li>
+                  <li class="<?php echo (($current_path == $user_url)?"active":""); ?>"><i class="icon-pencil"></i><?php echo l('My Apps', $user_url . '/apps'); ?></li>
+                  <li class="<?php echo (($current_path == $user_url)?"active":""); ?>"><i class="icon-user"></i><?php echo l('Edit Profile', $user_url . '/edit'); ?></li>
+                  <li><i class="icon-off"></i><?php echo l(t("Logout"), "user/logout"); ?></li>
                 </ul>
               </li>
 
