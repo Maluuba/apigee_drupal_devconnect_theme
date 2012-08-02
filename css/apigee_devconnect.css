@@ -5,7 +5,7 @@ input{
 
 /* Bootstrap */
 .caret{
-	opacity: 1;
+	opacity: 0.5;
 }
 
 /* Homepage */
@@ -274,6 +274,7 @@ span.blog-icon{
 }
 .app-content{
 	float: left;
+	margin-bottom: 18px;
 	width: 90%
 }
 hr{
@@ -284,6 +285,9 @@ h4.app-title{
 	font-size: 24px;
 	margin-bottom: 15px;
 	text-transform: capitalize;
+}
+.app-desc{
+	font-size: 15px;
 }
 .api-credentials-list-item-caption{
 	float: left;
@@ -297,7 +301,7 @@ h4.app-title{
 .app-delete button:hover{
 	background: url(/sites/all/themes/apigee_devconnect/images/delete-icon.png) no-repeat;
 	border: none;
-	float: left;
+	float: right;
 	height: 15px;
 	width: 15px;
 }
