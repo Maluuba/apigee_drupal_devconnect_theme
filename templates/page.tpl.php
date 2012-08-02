@@ -26,11 +26,11 @@
             <?php } else {
               $user_url =  "user/".$user->uid; ?>
 
-              <li class="dropdown <?php echo (($current_path == $user_url)?"active":""); ?>">
+              <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php print $user->mail; ?><b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                  <li class="<?php echo (($current_path == $user_url)?"active":""); ?>"><i class="icon-pencil"></i><?php echo l('My Apps', $user_url . '/apps'); ?></li>
-                  <li class="<?php echo (($current_path == $user_url)?"active":""); ?>"><i class="icon-user"></i><?php echo l('Edit Profile', $user_url . '/edit'); ?></li>
+                  <li><i class="icon-pencil"></i><?php echo l('My Apps', $user_url . '/apps'); ?></li>
+                  <li><i class="icon-user"></i><?php echo l('Edit Profile', $user_url . '/edit'); ?></li>
                   <li><i class="icon-off"></i><?php echo l(t("Logout"), "user/logout"); ?></li>
                 </ul>
               </li>
