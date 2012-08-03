@@ -1,4 +1,8 @@
 /* Sitewide */
+html,
+body {
+	height: 100%;
+}
 input{
 	line-height: 16px !important;
 }
@@ -6,6 +10,51 @@ input{
 /* Bootstrap */
 .caret{
 	opacity: 0.5;
+}
+
+/* Navigation */
+.navbar .nav > li > a,
+.navbar .nav > li > span {
+	float: none;
+	padding: 18px 10px 19px;
+	line-height: 19px;
+	height: 19px;
+	color: white;
+	text-decoration: none;
+}
+.navbar .nav > li > a:hover, .navbar .nav > li > a.active {
+  background-color: #E02E01;
+	color: white;
+	text-decoration: none;
+  }
+.navbar.navbar-fixed-top #main-menu li a:hover {
+  background: #e02e01;
+}
+.navbar.navbar-fixed-top, .main-nav.navbar-inner{
+  background-color: #d64526;
+}
+.main-nav.navbar-inner{
+  height: 42px;
+}
+.main-nav.navbar-inner .nav > li > a {
+  padding: 10px 9px;
+}
+.navbar .brand {
+	float: left;
+	display: block;
+	padding: 15px 10px;
+	margin-left: -20px;
+	font-size: 20px;
+	font-weight: 200;
+	line-height: 1;
+	color: white;
+}
+.navbar .nav > li > a, .navbar .nav > li > span {
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 21px;
+  text-shadow: none;
 }
 
 /* Homepage */
@@ -315,6 +364,30 @@ ul.dropdown-menu{
 }
 ul.dropdown-menu a{
 	display: inline-block;
+}
+
+/* Footer */
+.footer.navbar-fixed-bottom {
+  bottom: auto;
+  position: relative;
+}
+.footer .footer-inner {
+  background: none repeat scroll 0 0 #FAFAFA;
+	border-top: medium none;
+	box-shadow: 0 6px 6px -4px rgba(0, 0, 0, 0.05) inset;
+	color: #1D7CA7;
+	opacity: 1;
+}
+div.row, [class*="span"] {
+  margin-left: 0;
+}
+.footer-txt p {
+  color: #BABBBF;
+  font-size: 13px;
+  line-height: 13px;
+  margin: 0;
+  padding: 24px 0;
+  text-align: right;
 }
 
 /* Errors */
