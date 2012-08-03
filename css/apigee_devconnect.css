@@ -358,6 +358,25 @@ h4.app-title{
 	margin-left: 10px;
 }
 
+/* App Details */
+.key{
+	border-top: 1px dashed #e9eaeb;
+	border-bottom: 1px dashed #e9eaeb;
+	padding: 10px 0px 10px 10px;
+}
+.app-details h3{
+	font-size: 18px;
+	font-weight: 600;
+}
+.key .key-label{
+	font-size: 16px;
+	font-weight: 600;
+	margin-right: 25px;
+	width: 175px;
+	display: inline-block;
+	text-align: right;
+}
+
 /* Links */
 ul.dropdown-menu{
 	padding-left: 10px;
