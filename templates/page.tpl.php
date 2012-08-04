@@ -2,19 +2,16 @@
 <header id="navbar" role="banner" class="navbar navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container">
-
       <?php if ($logo): ?>
         <a class="brand" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
           <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
         </a>
       <?php endif; ?>
-
       <div class="nav-collapse">
         <nav role="navigation">
           <?php if ($primary_nav): ?>
             <?php print $primary_nav; ?>
           <?php endif; ?>
-
           <div id='login-buttons' class="span6 pull-right">
             <ul class="nav pull-right">
             <?php if ($user->uid == 0) { ?>
@@ -25,7 +22,6 @@
             <?php endif; ?>
             <?php } else {
               $user_url =  "user/".$user->uid; ?>
-
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php print $user->mail; ?><b class="caret"></b></a>
                 <ul class="dropdown-menu">
@@ -34,11 +30,7 @@
                   <li><i class="icon-off"></i><?php echo l(t("Logout"), "user/logout"); ?></li>
                 </ul>
               </li>
-
-
-
               <li><?php echo l(t("logout"), "user/logout"); ?></li>
-
             <?php } ?>
             </ul>
           </div>
@@ -48,13 +40,11 @@
     </div>
   </div>
 </header>
-
 <div class="master-container">
   <!-- Header -->
   <header role="banner" id="page-header">
     <?php print render($page['header']); ?>
   </header>
-
   <!-- Breadcrumbs -->
   <div id="breadcrumb-navbar">
     <div class="container">
@@ -70,7 +60,6 @@
       </div>
     </div>
   </div>
-
   <!-- Title -->
   <?php if (drupal_is_front_page()): ?>
   <?php if ($title): ?>
@@ -98,19 +87,24 @@
             <div class="container">
               <div class="row">
                 <span class="<?php print _apigee_base_content_span($columns); ?>">
-                 <?php print render($title_prefix); ?>
-                 <h1><?php print $title; ?></h1>
-                 <?php print render($title_suffix); ?>
+                  <!-- Title Prefix -->
+                  <?php print render($title_prefix); ?>
+                  <!-- Title -->
+                  <h1><?php print render($title); ?></h1>
+                  <?php if ($subtitle): ?>
+                    <!-- SubTitle -->
+                    <h2><?php print render($subtitle); ?></h2>
+                  <?php endif; ?>
+                  <!-- Title Suffix -->
+                  <?php print render($title_suffix); ?>
                 </span>
               </div>
             </div>
         </section>
     <?php endif; ?>
   <?php endif; ?>
-
   <div class="page-content">
     <div class="container">
-      <!-- Admin Stuff-->
       <?php print $messages; ?>
       <?php if ($page['help']): ?>
         <div class="well"><?php print render($page['help']); ?></div>
@@ -118,15 +112,13 @@
       <?php if ($action_links): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
-
       <div class="row">
-        <!-- Left Sidebar  -->
+        <!-- Sidebar First (Left Sidebar)  -->
         <?php if ($page['sidebar_first']): ?>
           <aside class="span6" role="complementary">
             <?php print render($page['sidebar_first']); ?>
           </aside>
         <?php endif; ?>
-
         <!-- Main Body  -->
         <section class="<?php print _apigee_base_content_span($columns); ?>">
           <?php if ($page['highlighted']): ?>
@@ -138,19 +130,16 @@
           <a id="main-content"></a>
           <?php print render($page['content']); ?>
         </section>
-
-        <!-- Right Sidebar  -->
+        <!-- Sidebar Second (Right Sidebar)  -->
         <?php if ($page['sidebar_second']): ?>
           <aside class="span6" role="complementary">
             <?php print render($page['sidebar_second']); ?>
           </aside>  <!-- /#sidebar-second -->
         <?php endif; ?>
-
       </div>
     </div>
   </div>
 </div>
-
 <!-- Footer  -->
 <footer class="footer">
   <div class="footer-inner">
