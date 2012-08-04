@@ -6,6 +6,7 @@
       $('table').addClass('table table-condensed');
       $('.comment-delete a, .comment-edit a, .comment-reply a').addClass('btn');
       $('.faq-question-answer').addClass('accordion-group');
+      $('#devconnect-developer-apps-edit-form').addClass('well');
 
       // CSS
       $('.node-blog.node-teaser:first').css('padding-top','0px');
