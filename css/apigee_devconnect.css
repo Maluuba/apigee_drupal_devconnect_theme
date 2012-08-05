@@ -30,6 +30,10 @@ input{
 .navbar.navbar-fixed-top #main-menu li a:hover {
   background: #e02e01;
 }
+.nav-tabs > li > a{
+	font-weight: 600;
+	font-size: 15px;
+}
 .navbar.navbar-fixed-top, .main-nav.navbar-inner{
   background-color: #d64526;
 }
