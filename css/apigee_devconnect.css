@@ -148,6 +148,7 @@ span.welcome{
 }
 .home-header-btn .iconbtn.key{
 	background-position: -120px -330px;
+	padding: 0;
 }
 .home-img{
 	float: left;
