@@ -93,7 +93,7 @@
                   <h1><?php print render($title); ?></h1>
                   <?php if ($subtitle): ?>
                     <!-- SubTitle -->
-                    <h2><?php print render($subtitle); ?></h2>
+                    <h2 class="subtitle"><?php print render($subtitle); ?></h2>
                   <?php endif; ?>
                   <!-- Title Suffix -->
                   <?php print render($title_suffix); ?>
