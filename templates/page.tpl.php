@@ -12,7 +12,7 @@
           <?php if ($primary_nav): ?>
             <?php print $primary_nav; ?>
           <?php endif; ?>
-          <div id='login-buttons' class="span6 pull-right">
+          <div id='login-buttons' class="span7 pull-right">
             <ul class="nav pull-right">
             <?php if ($user->uid == 0) { ?>
             <!-- show/hide login and register links depending on site registration settings -->
