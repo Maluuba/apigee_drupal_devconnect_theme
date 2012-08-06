@@ -343,6 +343,12 @@ h4.app-title{
 h4.app-title a:hover{
 	text-decoration: none;
 }
+h4.app-product-title{
+	color: #3c3c3c;
+	font-size: 24px;
+	margin-bottom: 15px;
+	text-transform: capitalize;
+}
 .app-desc{
 	font-size: 15px;
 }
