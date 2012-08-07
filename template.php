@@ -64,8 +64,9 @@ function apigee_devconnect_preprocess_page(&$variables) {
 
   // Custom Search
   $variables['search'] = FALSE;
-  if(theme_get_setting('toggle_search') && module_exists('search'))
-    $variables['search'] = drupal_get_form('_apigee_base_search_form');
+  if(theme_get_setting('toggle_search') && module_exists('search')) {
+    $variables['search'] = drupal_get_form('search_form');
+  }
 
   // Primary nav
   $variables['primary_nav'] = FALSE;
