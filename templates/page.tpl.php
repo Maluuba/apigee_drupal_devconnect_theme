@@ -62,46 +62,42 @@
   </div>
   <!-- Title -->
   <?php if (drupal_is_front_page()): ?>
-  <?php if ($title): ?>
+  <section class="page-header">
+    <div class="container">
+      <div class="row">
+        <div class="span9">
+          <div class="title">
+            <?php if (theme_get_setting('welcome_message')): ?>
+              <h1><?php print theme_get_setting('welcome_message'); ?></h1>
+            <?php else: ?>
+              <h1><span class="welcome">Welcome</span><br />to the&nbsp;<span><?php print $site_name ?></h1></span>
+            <?php endif; ?>
+           </div>
+        </div>
+      </div>
+      <div class="page-header-content">
+        <?php print render($page['homepage_header']); ?>
+      </div>
+  </section>
+  <?php else: ?>
     <section class="page-header">
-      <div class="container">
-        <div class="row">
-          <div class="span9">
-            <div class="title">
-              <?php if (theme_get_setting('welcome_message')): ?>
-                <h1><?php print theme_get_setting('welcome_message'); ?></h1>
-              <?php else: ?>
-                <h1><span class="welcome">Welcome</span><br />to the&nbsp;<span><?php print $site_name ?></h1></span>
+        <div class="container">
+          <div class="row">
+            <span class="<?php print _apigee_base_content_span($columns); ?>">
+              <!-- Title Prefix -->
+              <?php print render($title_prefix); ?>
+              <!-- Title -->
+              <h1><?php print render($title); ?></h1>
+              <?php if ($subtitle): ?>
+                <!-- SubTitle -->
+                <h2 class="subtitle"><?php print render($subtitle); ?></h2>
               <?php endif; ?>
-             </div>
+              <!-- Title Suffix -->
+              <?php print render($title_suffix); ?>
+            </span>
           </div>
         </div>
-        <div class="page-header-content">
-          <?php print render($page['homepage_header']); ?>
-        </div>
     </section>
-    <?php endif; ?>
-  <?php else: ?>
-    <?php if ($title): ?>
-        <section class="page-header">
-            <div class="container">
-              <div class="row">
-                <span class="<?php print _apigee_base_content_span($columns); ?>">
-                  <!-- Title Prefix -->
-                  <?php print render($title_prefix); ?>
-                  <!-- Title -->
-                  <h1><?php print render($title); ?></h1>
-                  <?php if ($subtitle): ?>
-                    <!-- SubTitle -->
-                    <h2 class="subtitle"><?php print render($subtitle); ?></h2>
-                  <?php endif; ?>
-                  <!-- Title Suffix -->
-                  <?php print render($title_suffix); ?>
-                </span>
-              </div>
-            </div>
-        </section>
-    <?php endif; ?>
   <?php endif; ?>
   <div class="page-content">
     <div class="container">
