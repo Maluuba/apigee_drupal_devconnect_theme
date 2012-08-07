@@ -111,7 +111,7 @@
       <div class="row">
         <!-- Sidebar First (Left Sidebar)  -->
         <?php if ($page['sidebar_first']): ?>
-          <aside class="span6" role="complementary">
+          <aside class="span5 pull-left" role="complementary">
             <?php print render($page['sidebar_first']); ?>
           </aside>
         <?php endif; ?>
@@ -128,7 +128,7 @@
         </section>
         <!-- Sidebar Second (Right Sidebar)  -->
         <?php if ($page['sidebar_second']): ?>
-          <aside class="span6" role="complementary">
+          <aside class="span5 pull-right" role="complementary">
             <?php print render($page['sidebar_second']); ?>
           </aside>  <!-- /#sidebar-second -->
         <?php endif; ?>
