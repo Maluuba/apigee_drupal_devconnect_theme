@@ -12,6 +12,11 @@ input{
 	opacity: 0.5;
 }
 
+/* Search */
+.navbar-search .search-query:-moz-placeholder{
+	color: #e5e5e5;
+}
+
 /* Navigation */
 .navbar .nav > li > a,
 .navbar .nav > li > span {
@@ -325,7 +330,7 @@ span.blog-icon{
 	font-weight: 600;
 	position: absolute;
 	right: 0;
-	top: -88px;
+	top: 0;
 	padding: 15px 48px 15px 20px;
 }
 .add-app:hover{
