@@ -31,7 +31,7 @@ input{
   background-color: #E02E01;
 	color: white;
 	text-decoration: none;
-  }
+}
 .navbar.navbar-fixed-top #main-menu li a:hover {
   background: #e02e01;
 }
@@ -324,7 +324,7 @@ span.blog-icon{
 	border-radius: 5px 5px 5px 5px;
 	-moz-border-radius: 5px 5px 5px 5px;
 	-webkit-border-radius: 5px 5px 5px 5px;
-	box-shadow: 0px 0px 10px #C7C7C7;
+	box-shadow: 0px 0px 7px #DDDDDD;
 	color: #3C3D3C;
 	font-size: 15px;
 	font-weight: 600;
@@ -338,8 +338,10 @@ span.blog-icon{
 }
 .app-content{
 	float: left;
-	margin-bottom: 18px;
-	width: 90%
+	margin-bottom: 0;
+	width: 90%;
+	padding: 15px 0px;
+	border-bottom: 1px solid #EEE;
 }
 hr{
 	clear: both;
@@ -357,7 +359,7 @@ h4.app-product-title{
 	color: #3c3c3c;
 	font-size: 24px;
 	line-height: 24px;
-	margin-bottom: 0px;
+	margin-bottom: 5px;
 	text-transform: capitalize;
 }
 .app-desc{
