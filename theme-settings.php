@@ -66,5 +66,17 @@ function apigee_devconnect_form_system_theme_settings_alter(&$form, $form_state)
     '#default_value' => theme_get_setting('footer_link_hover_color'),
     '#description'   => t("Use this field to change the color of footer links on hover"),
   );
+  $form['devconnect_branding']['button_background_color'] = array(
+    '#type'          => 'textfield',
+    '#title'         => t('Button Background Color'),
+    '#default_value' => theme_get_setting('button_background_color'),
+    '#description'   => t("Use this field to change the button background color"),
+  );
+  $form['devconnect_branding']['button_text_color'] = array(
+    '#type'          => 'textfield',
+    '#title'         => t('Button Text Color'),
+    '#default_value' => theme_get_setting('button_text_color'),
+    '#description'   => t("Use this field to change the button text color"),
+  );
 }
 ?>

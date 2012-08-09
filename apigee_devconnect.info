@@ -28,3 +28,5 @@ settings[link_hover_color] = #0B4965
 settings[footer_bg_color] = #FFFFFF
 settings[footer_link_color] = #0B4965
 settings[footer_link_hover_color] = #0B4965
+settings[button_background_color] = #009FD0
+settings[button_text_color] = #FFFFFF

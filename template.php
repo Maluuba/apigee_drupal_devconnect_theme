@@ -13,6 +13,8 @@ function apigee_devconnect_preprocess_html(&$variables) {
   $footer_bg_color         = theme_get_setting('footer_bg_color');
   $footer_link_color       = theme_get_setting('footer_link_color');
   $footer_link_hover_color = theme_get_setting('footer_link_hover_color');
+  $button_background_color = theme_get_setting('button_background_color');
+  $button_text_color       = theme_get_setting('button_text_color');
 
   drupal_add_css(".navbar-inner {background-color: $header_bg_color}", array('group' => CSS_THEME, 'type' => 'inline'));
   drupal_add_css(".navbar .nav > li > a {color: $header_txt_color}", array('group' => CSS_THEME, 'type' => 'inline'));
@@ -24,6 +26,9 @@ function apigee_devconnect_preprocess_html(&$variables) {
   drupal_add_css(".footer .footer-inner {background-color: $footer_bg_color}", array('group' => CSS_THEME, 'type' => 'inline'));
   drupal_add_css(".footer .footer-inner .navbar ul.footer-links > li > a {color: $footer_link_color}", array('group' => CSS_THEME, 'type' => 'inline'));
   drupal_add_css(".footer .footer-inner .navbar ul.footer-links > li > a:hover {color: $footer_link_hover_color}", array('group' => CSS_THEME, 'type' => 'inline'));
+
+  drupal_add_css(".btn {background: $button_background_color}", array('group' => CSS_THEME, 'type' => 'inline'));
+  drupal_add_css(".btn {color: $button_text_color}", array('group' => CSS_THEME, 'type' => 'inline'));
 
 }
 
