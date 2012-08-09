@@ -139,9 +139,6 @@ function apigee_devconnect_preprocess_page(&$variables) {
         ),
       ));
     }
-
-    // Replace tabs with dropw down version
-    $variables['tabs']['#primary'] = _apigee_base_local_tasks($variables['tabs']['#primary']);
   }
 }
 
