@@ -413,6 +413,21 @@ h4.app-product-title{
 	text-align: right;
 }
 
+/* User Registration Form */
+.page-user-register .checkbox input[type="checkbox"]{
+	margin-left: 0;
+	margin-right: 0;
+}
+.page-user-register .control-label{
+	font-size: 18px;
+	font-weight: 600;
+}
+.page-user-register .form-item-field-terms-and-conditions-und .control-label{
+	font-size: 13px;
+	font-weight: 500;
+	padding-left: 10px;
+}
+
 /* Links */
 ul.dropdown-menu{
 	padding-left: 10px;
