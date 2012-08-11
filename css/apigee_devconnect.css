@@ -464,3 +464,4 @@ div.row, [class*="span"] {
 div.error{
 	background: none;
 }
+.front .region-highlighted { clear:both; float: none; overflow:hidden; }
