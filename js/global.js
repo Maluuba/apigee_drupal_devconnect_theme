@@ -1,6 +1,9 @@
 (function ($) {
   Drupal.behaviors.apigee = {
     attach: function (context, settings) {
+      if ($('body').hasClass('page-user-me-edit')) {
+        $('body').addClass('page-user-edit');
+      };
       // Add Classes
       $('.view-home-featured-forum-posts .views-row').addClass('row');
       $('table').addClass('table table-condensed');
