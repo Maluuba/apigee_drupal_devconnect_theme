@@ -3,9 +3,6 @@ html,
 body {
 	height: 100%;
 }
-input{
-	line-height: 16px !important;
-}
 
 /* Bootstrap */
 .caret{
@@ -15,6 +12,11 @@ input{
 /* Search */
 .navbar-search .search-query:-moz-placeholder{
 	color: #e5e5e5;
+}
+
+/* Login */
+ul.openid-links{
+	margin: 0 0 10px 0;
 }
 
 /* Navigation */
@@ -463,3 +465,7 @@ div.error{
 	background: none;
 }
 .front .region-highlighted { clear:both; float: none; overflow:hidden; }
+
+input{
+	line-height: 16px !important;
+}
