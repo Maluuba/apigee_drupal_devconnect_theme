@@ -14,11 +14,6 @@ body {
 	color: #e5e5e5;
 }
 
-/* Login */
-ul.openid-links{
-	margin: 0 0 10px 0;
-}
-
 /* Navigation */
 .navbar .nav > li > a,
 .navbar .nav > li > span {
@@ -417,18 +412,58 @@ h4.app-product-title{
 
 /* User Registration Form */
 .page-user-register .checkbox input[type="checkbox"]{
-	margin-left: 0;
-	margin-right: 0;
+	margin-left: -10px;
+	margin-right: 10px;
 }
-.page-user-register .control-label{
+.page-user-register .control-label,
+.page-user-edit .control-label{
 	font-size: 18px;
 	font-weight: 600;
+}
+.page-user-edit .option.radio.control-label,
+.page-user-edit .option.checkbox.control-label{
+	font-size: 13px;
+	font-weight: 500;
 }
 .page-user-register .form-item-field-terms-and-conditions-und .control-label{
 	font-size: 13px;
 	font-weight: 500;
 	padding-left: 10px;
 }
+.page-user-edit .control-group.form-item-name,
+.page-user-edit .control-group.form-item-field-last-name-und-0-value,
+.page-user-edit .control-group.form-item-current-pass,
+.page-user-edit .control-group.form-item-mail,
+.page-user-edit .control-group.form-item-pass,
+.page-user-edit .control-group.form-item-status,
+.page-user-edit .control-group.form-item-roles,
+.page-user-edit .control-group.form-item-timezone{
+	border-bottom: 1px solid #DDD;
+	margin-bottom: 18px;
+	padding-bottom: 18px;
+}
+.page-user-edit .control-group .control-group{
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+.page-user-edit fieldset{
+	margin-bottom: 0;
+}
+.page-user-edit legend{
+	border-bottom: none;
+	margin-bottom: 5px;
+}
+.page-user .form-actions .btn{
+	margin-right: 10px;
+}
+
+/* User Login Form */
+ul.openid-links{
+	margin: 0 0 10px 0;
+}
+
+/* User Edit Form */
 
 /* Links */
 ul.dropdown-menu{

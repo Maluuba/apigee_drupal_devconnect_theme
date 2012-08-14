@@ -7,7 +7,8 @@
       $('.comment-delete a, .comment-edit a, .comment-reply a').addClass('btn');
       $('.faq-question-answer').addClass('accordion-group');
       $('#devconnect-developer-apps-edit-form').addClass('well');
-      $('.page-user-register .page-content .container').addClass('well');
+      $('.page-user-register .page-content .container, .page-user-edit .page-content .container').addClass('well');
+      $('.page-user-register input.form-submit').wrap('<div class="form-actions" />');
 
       // CSS
       $('.node-blog.node-teaser:first').css('padding-top','0px');
