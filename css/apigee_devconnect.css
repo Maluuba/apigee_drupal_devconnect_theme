@@ -464,6 +464,10 @@ ul.openid-links{
 }
 
 /* User Edit Form */
+#edit-timezone a.fieldset-title,
+#edit-metatags{
+	display: none;
+}
 
 /* Links */
 ul.dropdown-menu{
