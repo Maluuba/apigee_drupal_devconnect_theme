@@ -465,7 +465,8 @@ ul.openid-links{
 
 /* User Edit Form */
 #edit-timezone a.fieldset-title,
-#edit-metatags{
+#edit-metatags,
+#edit-redirect{
 	display: none;
 }
 
