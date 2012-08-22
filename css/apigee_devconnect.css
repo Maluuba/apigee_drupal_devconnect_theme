@@ -283,7 +283,7 @@ span.blog-icon{
 #block-views-hot-topics-block h2{
 	background: url("/sites/all/themes/apigee_devconnect/images/hot-icon.png") no-repeat scroll 110px center transparent;
 }
-.view-hot-topics .views-row ul, li{
+.view-hot-topics .views-row ul{
 	list-style: none;
 	margin: 0;
 	padding: 0;
