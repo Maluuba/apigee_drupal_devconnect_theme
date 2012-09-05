@@ -36,10 +36,6 @@ function apigee_devconnect_preprocess_html(&$variables) {
  * Preprocessor for theme('page').
  */
 function apigee_devconnect_preprocess_page(&$variables) {
-  module_load_include('inc', 'user', 'user.admin');
-  $user_reg_setting = drupal_get_form('user_admin_settings');
-  $variables['user_reg_setting'] = $user_reg_setting['registration_cancellation']['user_register']['#value'];
-
   if (module_exists('apachesolr')) {
     // todo: $searchTerm is undefined, so this parameter will always be empty
     $search = drupal_get_form('search_form', NULL, (isset($searchTerm) ? $searchTerm : ''));
