@@ -90,11 +90,8 @@
               <?php print render($title_prefix); ?>
               <!-- Title -->
               <h1><?php print render($title); ?></h1>
-              <?php if ($subtitle): ?>
-                <!-- SubTitle -->
-                <h2 class="subtitle"><?php print render($subtitle); ?></h2>
-              <?php endif; ?>
-              <!-- Title Suffix -->
+              <!-- SubTitle -->
+              <h2 class="subtitle"><?php print render($subtitle); ?></h2>              <!-- Title Suffix -->
               <?php print render($title_suffix); ?>
             </span>
           </div>
