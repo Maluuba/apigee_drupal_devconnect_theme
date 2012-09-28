@@ -140,6 +140,14 @@ function apigee_devconnect_preprocess_page(&$variables) {
         ),
       ));
     }
+    # Fix for long user names
+    global $user;
+    $user_email = $user -> mail;
+    if (strlen($user_email) > 22) {
+      $tmp = str_split($user_email, 16);
+      $user_email = $tmp[0] . '&hellip;';
+    }
+    $variables['truncated_user_email'] = $user_email;
   }
 }
 

@@ -23,7 +23,7 @@
             <?php } else {
               $user_url =  "user/".$user->uid; ?>
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php print $user->mail; ?><b class="caret"></b></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="<?php print $user -> mail; ?>"><?php print $truncated_user_email; ?><b class="caret"></b></a>
                 <ul class="dropdown-menu">
                   <?php if (module_exists('devconnect_developer_apps')): ?>
                   <li><i class="icon-pencil"></i><?php echo l('My Apps', $user_url . '/apps'); ?></li>
@@ -80,6 +80,7 @@
       <div class="page-header-content">
         <?php print render($page['homepage_header']); ?>
       </div>
+    </div>
   </section>
   <?php else: ?>
     <section class="page-header">
