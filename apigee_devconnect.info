@@ -13,8 +13,11 @@ regions[sidebar_second] = 'Secondary'
 regions[footer]         = 'Footer'
 
 stylesheets[all][] = css/apigee_devconnect.css
+stylesheets[all][] = css/daterangepicker.css
 
 scripts[] = js/global.js
+scripts[] = js/date.js
+scripts[] = js/daterangepicker.js
 
 settings[toggle_name] = 0
 settings[toggle_search] = 1

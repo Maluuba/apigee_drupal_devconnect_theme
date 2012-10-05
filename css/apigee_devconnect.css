@@ -410,6 +410,57 @@ h4.app-product-title{
 	text-align: right;
 }
 
+/* App Performance */
+#performance .form-label{
+	float: left;
+	font-weight: bold;
+	margin-top: 6px;
+	margin-right: 5px;
+}
+#performance select#display{
+	border: 1px solid #B7C0C5;
+	border-radius: 5px;
+	float: left;
+}
+#performance .btn{
+	background-color: #f3f3f4;
+	background-image: -moz-linear-gradient(top, #ffffff, #f3f3f4);
+	background-image: -ms-linear-gradient(top, #ffffff, #f3f3f4);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#f3f3f4));
+	background-image: -webkit-linear-gradient(top, #ffffff, #f3f3f4);
+	background-image: -o-linear-gradient(top, #ffffff, #f3f3f4);
+	background-image: linear-gradient(top, #ffffff, #f3f3f4);
+}
+#performance .export{
+	margin-bottom: 10px;
+}
+#performance .export,
+#performance #range{
+	border: 1px solid #B7C0C5;
+	border-radius: 5px;
+}
+#performance #range{
+	width: 84px;
+}
+#performance #reportrange{
+	background: none repeat scroll 0 0 #FFFFFF;
+  border: 1px solid #B7C0C5;
+  border-radius: 5px 5px 5px 5px;
+  margin-left: 10px;
+  padding: 5px;
+}
+#performance #reportrange .caret{
+	margin-left: 10px;
+  margin-top: 7px;
+}
+#performance .btn{
+	color: #676766;
+}
+#performance .btn.active,
+#performance .btn:active{
+	color: #3c3d3c;
+}
+
 /* User Registration Form */
 .page-user-register .checkbox input[type="checkbox"]{
 	margin-left: -10px;
