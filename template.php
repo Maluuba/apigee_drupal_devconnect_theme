@@ -180,3 +180,12 @@ function apigee_devconnect_form_comment_form_alter(&$form, &$form_state) {
   hide($form['actions']['preview']);
   $form['actions']['submit']['#value'] = 'Add comment';
 }
+
+/**
+ * hook_css_alter
+ */
+function apigee_devconnect_css_alter(&$css) {
+  if (isset($css['misc/ui/jquery.ui.theme.css'])) {
+    $css['misc/ui/jquery.ui.theme.css']['data'] = drupal_get_path('theme', 'apigee_devconnect') . '/jquery_ui/jquery-ui-1.9.0.custom.css';
+  }
+}
