@@ -496,6 +496,10 @@ h4.app-product-title{
 .page-user .form-actions .btn{
 	margin-right: 10px;
 }
+.page-user .password-strength-text {
+	left: 120px;
+	position: absolute;
+}
 
 /* User Login Form */
 ul.openid-links{
