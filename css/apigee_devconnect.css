@@ -448,6 +448,12 @@ h4.app-product-title{
 #performance .btn:active{
 	color: #3c3d3c;
 }
+#performance #edit-date-from,
+#performance #edit-date-to{
+	background-image: url(/sites/all/themes/apigee_devconnect/images/cal-icon.png);
+	background-repeat: no-repeat;
+	background-position: 155px 3px;
+}
 
 /* User Registration Form */
 .page-user-register .checkbox input[type="checkbox"]{
