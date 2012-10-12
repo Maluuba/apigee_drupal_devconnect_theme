@@ -17,6 +17,9 @@
       $('.node-blog.node-teaser:first').css('padding-top','0px');
       $(".collapse").collapse();
       $('.page-comment-reply article.comment ul.links.inline').hide();
+
+      var activeTab = $('[href=' + location.hash + ']');
+      activeTab && activeTab.tab('show');
     }
   };
 })(jQuery);
