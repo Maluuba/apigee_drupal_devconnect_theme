@@ -475,15 +475,18 @@ h4.app-product-title{
 	font-weight: 500;
 	padding-left: 10px;
 }
-.page-user-edit .control-group{
+.page-user-edit .control-group.form-item-name,
+.page-user-edit .control-group.form-item-field-last-name-und-0-value,
+.page-user-edit .control-group.form-item-current-pass,
+.page-user-edit .control-group.form-item-mail,
+.page-user-edit .control-group.form-item-pass,
+.page-user-edit .control-group.form-item-status,
+.page-user-edit .control-group.form-item-roles,
+.page-user-edit .control-group.form-openid,
+.page-user-edit .control-group.form-item-timezone{
 	border-bottom: 1px solid #DDD;
 	margin-bottom: 18px;
 	padding-bottom: 18px;
-}
-.page-user-edit .control-group.form-item-field-terms-and-conditions-und{
-	border-bottom: none;
-	margin-bottom: 0;
-	padding-bottom: 0;
 }
 .page-user-edit .control-group .control-group{
 	border: none;
